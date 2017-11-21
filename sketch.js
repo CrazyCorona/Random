@@ -18,8 +18,7 @@ var dot=
 
 function setup() {
 	createCanvas(windowWidth, windowHeight);
-		background(255);
-		timer.val=0;
+	background(0);
 }
 
 function draw()
@@ -55,4 +54,7 @@ function randomise()
 	dot.col.r=map(dot.x,0,width,0,255);
 	dot.col.g=map(dot.y,0,height,0,255);
 	dot.col.b=map(dot.x+dot.y,0,width+height,0,255);
+}
+function mousePressed(){
+	background(dot.col.r,dot.col.g,dot.col.b);
 }
